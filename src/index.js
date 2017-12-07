@@ -8,6 +8,7 @@ import {contacts} from "./data/contacts";
 let state = {
     contacts: contacts,
     displayContact: function (e) {
+        location.hash = "#/contact/" + e.target.closest("li").id.split("-")[1];
         setState({currentContact: e.target.closest("li").id.split("-")[1]});
     }
 };
